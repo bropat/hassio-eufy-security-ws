@@ -10,7 +10,7 @@ arch:
   - armhf
   - armv7
   - i386
-codenotary: patrick.broetto@gmail.com
+#codenotary: patrick.broetto@gmail.com
 stage: stable
 host_network: true
 timeout: 30
