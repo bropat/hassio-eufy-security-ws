@@ -22,4 +22,6 @@ jobs:
           args: |
             --all \
             --target eufy-security-ws \
-            --docker-hub bropat ${{env.CAS_API_KEY}}
+            --docker-hub bropat
+        #env:
+        #  CAS_API_KEY: ${{ secrets.CAS_TOKEN }}
