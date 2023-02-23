@@ -1,0 +1,28 @@
+configuration:
+  username:
+    name: Gebruikersnaam
+    description: Eufy cloud account gebruikersnaam (e-mail)
+  password:
+    name: Wachtwoord
+    description: Eufy cloud account wachtwoord
+  country:
+    name: Land
+    description: Eufy cloud account land
+  accept_invitations:
+    name: Uitnodigingen accepteren
+    description: Automatisch een ontvangen uitnodiging accepteren
+  polling_interval:
+    name: Cloud polling interval
+    description: Cloud polling interval in minuten
+  event_duration:
+    name: Duur van het evenement
+    description: Duur van de gebeurtenis van het apparaat in seconden (reset-tijd van de gebeurtenis)
+  debug:
+    name: Debug
+    description: Debug-modus inschakelen
+  port:
+    name: Poort
+    description: Luisterpoort (host)
+  stations:
+    name: Stations
+    description: Voorgestelde IP-adressen of broadcast-adressen voor stations

@@ -1,0 +1,28 @@
+configuration:
+  username:
+    name: Nazwa użytkownika
+    description: Nazwa użytkownika konta w chmurze Eufy (e-mail)
+  password:
+    name: Hasło
+    description: Hasło do konta w chmurze Eufy
+  country:
+    name: Kraj
+    description: Konto w chmurze Eufy kraj
+  accept_invitations:
+    name: Przyjmowanie zaproszeń
+    description: Automatycznie zaakceptuj otrzymane zaproszenie
+  polling_interval:
+    name: Interwał pollingu chmury
+    description: Interwał pollingu chmury w minutach
+  event_duration:
+    name: Czas trwania zdarzenia
+    description: Czas trwania zdarzenia urządzenia w sekundach (czas resetu zdarzenia)
+  debug:
+    name: Debugowanie
+    description: Włącz tryb debugowania
+  port:
+    name: Port
+    description: Port nasłuchujący (host)
+  stations:
+    name: Stacje
+    description: Sugerowane adresy IP lub adresy rozgłoszeniowe dla stacji

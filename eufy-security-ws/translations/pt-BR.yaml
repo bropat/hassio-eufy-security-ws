@@ -1,0 +1,28 @@
+configuration:
+  username:
+    name: Nome de usuário
+    description: Nome de usuário da conta Eufy Cloud (e-mail)
+  password:
+    name: Senha
+    description: Senha da conta Eufy Cloud
+  country:
+    name: País
+    description: Eufy país de conta de nuvem
+  accept_invitations:
+    name: Aceitar convites
+    description: Aceitar automaticamente um convite recebido
+  polling_interval:
+    name: Intervalo de sondagem nas nuvens
+    description: Intervalo de sondagem em minutos
+  event_duration:
+    name: Duração do evento
+    description: Duração do evento do dispositivo em segundos (tempo de reinicialização do evento)
+  debug:
+    name: Depuração
+    description: Habilitar o modo de depuração
+  port:
+    name: Porta
+    description: Porta de escuta (hospedeiro)
+  stations:
+    name: Estações
+    description: Endereços IP sugeridos ou endereços de transmissão para estações

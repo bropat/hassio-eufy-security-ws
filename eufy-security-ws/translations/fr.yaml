@@ -1,0 +1,28 @@
+configuration:
+  username:
+    name: Nom d'utilisateur
+    description: Nom d'utilisateur du compte cloud Eufy (e-mail)
+  password:
+    name: Mot de passe
+    description: Mot de passe du compte cloud Eufy
+  country:
+    name: Pays
+    description: Pays du compte cloud Eufy
+  accept_invitations:
+    name: Accepter les invitations
+    description: Accepter automatiquement une invitation reçue
+  polling_interval:
+    name: Intervalle d'interrogation du nuage
+    description: Intervalle de sondage du nuage en minutes
+  event_duration:
+    name: Durée de l'événement
+    description: Durée de l'événement du dispositif en secondes (temps de réinitialisation de l'événement)
+  debug:
+    name: Déboguer
+    description: Activer le mode débogage
+  port:
+    name: Le port
+    description: Port d'écoute (hôte)
+  stations:
+    name: Les stations
+    description: Adresses IP ou adresses de diffusion suggérées pour les stations

@@ -1,0 +1,28 @@
+configuration:
+  username:
+    name: Benutzername
+    description: Eufy Cloud-Konto-Benutzername (E-Mail)
+  password:
+    name: Passwort
+    description: Eufy Cloud-Konto-Passwort
+  country:
+    name: Land
+    description: Eufy Cloud-Konto Land
+  accept_invitations:
+    name: Einladungen annehmen
+    description: Erhaltene Einladung automatisch annehmen
+  polling_interval:
+    name: Cloud-Abfrageintervall
+    description: Cloud-Abfrageintervall in Minuten
+  event_duration:
+    name: Dauer des Ereignisses
+    description: Dauer des Geräteereignisses in Sekunden (Ereignisrücksetzzeit)
+  debug:
+    name: Debug
+    description: Debug-Modus aktivieren
+  port:
+    name: Port
+    description: Port (host)
+  stations:
+    name: Stationen
+    description: Vorgeschlagene IP-Adressen oder Broadcast-Adressen für Stationen
