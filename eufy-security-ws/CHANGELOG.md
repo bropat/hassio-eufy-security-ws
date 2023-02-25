@@ -1,3 +1,8 @@
+## 1.3.4
+
+- Updated eufy-security-ws to version [`1.3.4`](https://github.com/bropat/eufy-security-ws/releases/tag/1.3.4)
+- Fixed AppArmor configuration for some architectures
+
 ## 1.3.3
 
 - Updated eufy-security-ws to version [`1.3.3`](https://github.com/bropat/eufy-security-ws/releases/tag/1.3.3)
