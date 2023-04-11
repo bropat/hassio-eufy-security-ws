@@ -37,5 +37,5 @@ See Documentation tab for more details.
 [armv7-shield]: https://img.shields.io/badge/armv7-yes-green.svg
 [i386-shield]: https://img.shields.io/badge/i386-yes-green.svg
 [maintenance-shield]: https://img.shields.io/maintenance/yes/2023.svg
-[release-shield]: https://img.shields.io/badge/version-v1.3.4-blue.svg
-[release]: https://github.com/bropat/eufy-security-ws/releases/tag/1.3.4
+[release-shield]: https://img.shields.io/badge/version-v1.3.5-blue.svg
+[release]: https://github.com/bropat/eufy-security-ws/releases/tag/1.3.5

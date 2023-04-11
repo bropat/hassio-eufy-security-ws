@@ -92,4 +92,4 @@ if bashio::config.has_value 'username' && bashio::config.has_value 'password'; t
     echo "$JSON_STRING" > $CONFIG_PATH
 fi
 
-/usr/bin/node /usr/src/app/node_modules/eufy-security-ws/dist/bin/server.js --host 0.0.0.0 --config $CONFIG_PATH $DEBUG_OPTION $PORT_OPTION
+exec /usr/bin/node /usr/src/app/node_modules/eufy-security-ws/dist/bin/server.js --host 0.0.0.0 --config $CONFIG_PATH $DEBUG_OPTION $PORT_OPTION
