@@ -25,7 +25,7 @@ This repository contains the following add-ons
 
       [![Open your Home Assistant instance and show the add add-on repository dialog with a specific repository URL pre-filled.](https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2Fbropat%2Fhassio-eufy-security-ws)
 
-2. To install an addon click on the relative addon link above to view the docs.
+2. To install the add-on by going to your HA Settings -> Add-Ons, and click the button in the bottom right corner "ADD-ON STORE". Search for Eufy Security and click the on the 'eufy-security-ws' tile. In the window that pops up, click install. 
 
 ## Changelog
 
