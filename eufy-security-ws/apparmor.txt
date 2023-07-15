@@ -28,6 +28,11 @@ profile eufy_security_ws flags=(attach_disconnected,mediate_deleted) {
   # Access to options.json and other files within your addon
   /data/** rw,
 
+  network inet dgram,
+  network inet stream,
+  network inet6 dgram,
+  network inet6 stream,
+
   # Start new profile for service
   /usr/bin/node cx -> node,
 
@@ -41,11 +46,17 @@ profile eufy_security_ws flags=(attach_disconnected,mediate_deleted) {
     # Access to options.json and other files within your addon
     /data/** rw,
 
+    /sys/fs/cgroup/memory/memory.limit_in_bytes r,
 
     # Access required for service functionality
     capability net_broadcast,
     network inet tcp,
     network inet udp,
+    network inet dgram,
+    network inet6 tcp,
+    network inet6 udp,
+    network inet6 dgram,
+    network netlink raw,
 
     /usr/bin/node rm,
     /etc/hosts r,
