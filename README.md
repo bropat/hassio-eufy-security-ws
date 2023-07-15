@@ -33,13 +33,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/).
 
 All notable changes to this project will be documented in the [CHANGELOG.md](eufy-security-ws/CHANGELOG.md) file.
 
-Version for releases is based on [eufy-security-ws](https://github.com/bropat/eufy-securits-ws) format: `X.Y.Z`.
+Version for releases is based on [eufy-security-ws](https://github.com/bropat/eufy-security-ws) format: `X.Y.Z`.
 
-Any changes on the addon that do not require a new version of [eufy-security-ws](https://github.com/bropat/eufy-securits-ws) will use the format: `X.Y.Z-A` where `X.Y.Z` is fixed on the [eufy-security-ws](https://github.com/bropat/eufy-securits-ws) release version and `A` is related to the addon.
+Any changes on the addon that do not require a new version of [eufy-security-ws](https://github.com/bropat/eufy-security-ws) will use the format: `X.Y.Z-A` where `X.Y.Z` is fixed on the [eufy-security-ws](https://github.com/bropat/eufy-security-ws) release version and `A` is related to the addon.
 
 ## Issues
 
-If you find any issues with the add-on, please check the [issue tracker](https://github.com/bropat/hassio-eufy-securits-ws/issues) for similar issues before creating one. If your issue is regarding specific devices or, more generally, an issue that arises after eufy-security-ws has successfully started, it should likely be reported in the [eufy-security-ws issue tracker](https://github.com/bropat/eufy-securits-ws/issues) or [eufy-security-client issue tracker](https://github.com/bropat/eufy-securits-client/issues).
+If you find any issues with the add-on, please check the [issue tracker](https://github.com/bropat/hassio-eufy-security-ws/issues) for similar issues before creating one. If your issue is regarding specific devices or, more generally, an issue that arises after eufy-security-ws has successfully started, it should likely be reported in the [eufy-security-ws issue tracker](https://github.com/bropat/eufy-security-ws/issues) or [eufy-security-client issue tracker](https://github.com/bropat/eufy-security-client/issues).
 
 Feel free to create a PR for fixes and enhancements.
 
