@@ -1,3 +1,7 @@
+## 1.6.3
+
+- Updated eufy-security-ws to version [`1.6.3`](https://github.com/bropat/eufy-security-ws/releases/tag/1.6.3)
+
 ## 1.6.2
 
 - Updated eufy-security-ws to version [`1.6.2`](https://github.com/bropat/eufy-security-ws/releases/tag/1.6.2)

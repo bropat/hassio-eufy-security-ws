@@ -9,4 +9,4 @@ codenotary:
   #signer: patrick.broetto@gmail.com
   base_image: notary@home-assistant.io
 args:
-  EUFY_SECURITY_WS_VERSION: 1.6.2
+  EUFY_SECURITY_WS_VERSION: 1.6.3
