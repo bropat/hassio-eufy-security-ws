@@ -26,3 +26,6 @@ configuration:
   stations:
     name: Stations
     description: Suggested IP addresses or broadcast addresses for stations
+  force_ipv4:
+    name: Force IPv4 Connections
+    description: If true, force Node.js to prefer IPv4 to work around push notification connection issues
