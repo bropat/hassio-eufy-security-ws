@@ -66,6 +66,11 @@ if bashio::config.true 'debug'; then
     DEBUG_OPTION="-v"
 fi
 
+IPV4_FIRST_NODE_OPTION=""
+if bashio::config.true 'ipv4first'; then
+    IPV4_FIRST_NODE_OPTION="--dns-result-order=ipv4first"
+fi
+
 JSON_STRING="$( jq -n \
   --arg username "$USERNAME" \
   --arg password "$PASSWORD" \
@@ -90,7 +95,7 @@ JSON_STRING="$( jq -n \
 
 if bashio::config.has_value 'username' && bashio::config.has_value 'password'; then
     echo "$JSON_STRING" > $CONFIG_PATH
-    exec /usr/bin/node /usr/src/app/node_modules/eufy-security-ws/dist/bin/server.js --host 0.0.0.0 --config $CONFIG_PATH $DEBUG_OPTION $PORT_OPTION
+    exec /usr/bin/node $IPV4_FIRST_NODE_OPTION /usr/src/app/node_modules/eufy-security-ws/dist/bin/server.js --host 0.0.0.0 --config $CONFIG_PATH $DEBUG_OPTION $PORT_OPTION
 else
     echo "Required parameters username and/or password not set. Starting aborted!"
 fi
