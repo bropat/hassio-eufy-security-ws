@@ -36,6 +36,6 @@ See Documentation tab for more details.
 [armhf-shield]: https://img.shields.io/badge/armhf-yes-green.svg
 [armv7-shield]: https://img.shields.io/badge/armv7-yes-green.svg
 [i386-shield]: https://img.shields.io/badge/i386-yes-green.svg
-[maintenance-shield]: https://img.shields.io/maintenance/yes/2023.svg
-[release-shield]: https://img.shields.io/badge/version-v1.7.1-blue.svg
-[release]: https://github.com/bropat/eufy-security-ws/releases/tag/1.7.1
+[maintenance-shield]: https://img.shields.io/maintenance/yes/2024.svg
+[release-shield]: https://img.shields.io/badge/version-v1.8.0-blue.svg
+[release]: https://github.com/bropat/eufy-security-ws/releases/tag/1.8.0
