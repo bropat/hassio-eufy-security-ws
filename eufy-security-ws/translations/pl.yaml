@@ -26,3 +26,6 @@ configuration:
   stations:
     name: Stacje
     description: Sugerowane adresy IP lub adresy rozgłoszeniowe dla stacji
+  ipv4first:
+    name: Wymuś najpierw adresy IPv4
+    description: Wymusza kolejność wyników dns w Node.js, aby najpierw zwracane były adresy IPv4

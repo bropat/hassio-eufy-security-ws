@@ -25,7 +25,7 @@ options:
   polling_interval: 10
   accept_invitations: true
   debug: false
-  force_ipv4: false
+  ipv4first: false
   event_duration: 10
   stations: []
 schema:
@@ -36,7 +36,7 @@ schema:
   polling_interval: int(1,1440)
   accept_invitations: bool
   debug: bool
-  force_ipv4: bool
+  ipv4first: bool
   event_duration: int(1,3600)?
   trusted_device_name: str?
   stations:

@@ -26,6 +26,6 @@ configuration:
   stations:
     name: Stations
     description: Suggested IP addresses or broadcast addresses for stations
-  force_ipv4:
-    name: Force IPv4 Connections
-    description: If true, force Node.js to prefer IPv4 to work around push notification connection issues
+  ipv4first:
+    name: Force IPv4 addresses first
+    description: Forces the dns result order on Node.js to return IPv4 addresses first

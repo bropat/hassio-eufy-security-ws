@@ -26,3 +26,6 @@ configuration:
   stations:
     name: Stationen
     description: Vorgeschlagene IP-Adressen oder Broadcast-Adressen für Stationen
+  ipv4first:
+    name: IPv4-Adressen zuerst erzwingen
+    description: Erzwingt die DNS-Ergebnisreihenfolge auf Node.js, um IPv4-Adressen zuerst zurückzugeben

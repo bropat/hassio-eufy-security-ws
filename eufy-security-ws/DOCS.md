@@ -12,7 +12,7 @@
 | `stations`            | Suggested IP addresses or broadcast addresses for stations (optional)                               |
 | `trusted_device_name` | Label of the trusted devices (viewable with 2fa activated in Eufy App; default: random device name) |
 | `debug`               | Activates debug mode (default: false)                                                               |
-| `force_ipv4`          | Forces the use of IPv4 when resolving endpoint addresses (default: false)                           |
+| `ipv4first`           | Forces the dns result order on Node.js to return IPv4 addresses first (default: false)              |
 
 ## Parameter `stations`
 
@@ -36,9 +36,9 @@ stations:
     ip_address: 192.168.0.255 # broadcast address
 ```
 
-## Parameter `force_ipv4`
+## Parameter `ipv4first`
 
-Starting with v17, Node.js no longer orders IPv4 addresses before IPv6 addresses when resolving domain names. The endpoint used for push notifications (`firebaseinstallations.googleapis.com`) unfortunately resolves to a number of different IPv6 addresses that are not reachable from some connections.
+Starting with v17, [Node.js no longer orders IPv4 addresses before IPv6 addresses](https://nodejs.org/api/cli.html#--dns-result-orderorder) when resolving domain names. The endpoint used for push notifications (`firebaseinstallations.googleapis.com`) unfortunately resolves to a number of different IPv6 addresses that are not reachable from some connections.
 
 If you stop receiving push notifications (and are seeing `create push credentials error` messages in the log that repeat endlessly), try setting this to `true`.
 
@@ -52,7 +52,7 @@ port: 3000
 polling_interval: 10
 accept_invitations: true
 debug: false
-force_ipv4: false
+ipv4first: false
 event_duration: 10
 stations:
   - serial_number: T8010XXXXXXXXXXX

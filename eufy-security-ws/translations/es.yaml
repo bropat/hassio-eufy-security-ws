@@ -26,3 +26,6 @@ configuration:
   stations:
     name: Estaciones
     description: Direcciones IP o direcciones de difusión sugeridas para las estaciones
+  ipv4first:
+    name: Forzar direcciones IPv4 primero
+    description: Fuerza el orden de los resultados dns en Node.js para devolver primero las direcciones IPv4
