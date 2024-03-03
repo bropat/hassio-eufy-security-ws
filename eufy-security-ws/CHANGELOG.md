@@ -1,6 +1,7 @@
 ## 1.8.0
 
 - Updated eufy-security-ws to version [`1.8.0`](https://github.com/bropat/eufy-security-ws/releases/tag/1.8.0)
+- Added new config parameter `ipv4first` ([#27](https://github.com/bropat/hassio-eufy-security-ws/pull/27))
 
 ## 1.7.1
 
