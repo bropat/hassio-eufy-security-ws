@@ -104,26 +104,9 @@ check_version() {
     return 0 # lower
 }
 
-node_version=$(node -v)
-node_result=0
-if [ "${node_version:1:2}" = "18" ]; then
-    check_version "v18.19.1" "$node_version"
-    node_result=$?
-elif [ "${node_version:1:2}" = "20" ]; then
-    check_version "v20.11.1" "$node_version"
-    node_result=$?
-else
-    check_version "v21.6.2" "$node_version"
-    node_result=$?
-fi
-WORKAROUND_ISSUE_310=""
-if [ $node_result -gt 0 ]; then
-    WORKAROUND_ISSUE_310="--security-revert=CVE-2023-46809"
-fi
-
 if bashio::config.has_value 'username' && bashio::config.has_value 'password'; then
     echo "$JSON_STRING" > $CONFIG_PATH
-    exec /usr/bin/node $WORKAROUND_ISSUE_310 $IPV4_FIRST_NODE_OPTION /usr/src/app/node_modules/eufy-security-ws/dist/bin/server.js --host 0.0.0.0 --config $CONFIG_PATH $DEBUG_OPTION $PORT_OPTION
+    exec /usr/bin/node --security-revert=CVE-2023-46809 $IPV4_FIRST_NODE_OPTION /usr/src/app/node_modules/eufy-security-ws/dist/bin/server.js --host 0.0.0.0 --config $CONFIG_PATH $DEBUG_OPTION $PORT_OPTION
 else
     echo "Required parameters username and/or password not set. Starting aborted!"
 fi

@@ -1,3 +1,7 @@
+## 1.8.0-2
+
+- Fixed livestreaming issue introduced by CVE-2023-46809 in Node.js ([#310](https://github.com/bropat/eufy-security-ws/issues/310))
+
 ## 1.8.0-1
 
 - Fixed livestreaming issue introduced by CVE-2023-46809 in Node.js ([#310](https://github.com/bropat/eufy-security-ws/issues/310))
