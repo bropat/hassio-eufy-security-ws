@@ -4,6 +4,10 @@
 
 [![ci][ci-shield]][ci-url] ![Release][release-shield] ![Stars][stars-shield]
 
+Join us on Discord:
+
+<a target="_blank" href="https://discord.gg/5wjQ2asb64"><img src="https://dcbadge.limes.pink/api/server/5wjQ2asb64" alt="" /></a>
+
 ## Add-ons
 
 This repository contains the following add-ons
