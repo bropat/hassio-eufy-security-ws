@@ -39,3 +39,7 @@ See Documentation tab for more details.
 [maintenance-shield]: https://img.shields.io/maintenance/yes/2024.svg
 [release-shield]: https://img.shields.io/badge/version-v1.9.2-blue.svg
 [release]: https://github.com/bropat/eufy-security-ws/releases/tag/1.9.2
+
+Join us on Discord:
+
+<a target="_blank" href="https://discord.gg/5wjQ2asb64"><img src="https://dcbadge.limes.pink/api/server/5wjQ2asb64" alt="" /></a>
