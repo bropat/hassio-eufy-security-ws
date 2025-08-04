@@ -37,9 +37,8 @@ See Documentation tab for more details.
 [armv7-shield]: https://img.shields.io/badge/armv7-yes-green.svg
 [i386-shield]: https://img.shields.io/badge/i386-yes-green.svg
 [maintenance-shield]: https://img.shields.io/maintenance/yes/2024.svg
-[release-shield]: https://img.shields.io/badge/version-v1.9.2-blue.svg
-[release]: https://github.com/bropat/eufy-security-ws/releases/tag/1.9.2
-
+[release-shield]: https://img.shields.io/badge/version-v1.9.3-blue.svg
+[release]: https://github.com/bropat/eufy-security-ws/releases/tag/1.9.3
 Join us on Discord:
 
 <a target="_blank" href="https://discord.gg/5wjQ2asb64"><img src="https://dcbadge.limes.pink/api/server/5wjQ2asb64" alt="" /></a>
