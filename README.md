@@ -4,6 +4,10 @@
 
 [![ci][ci-shield]][ci-url] ![Release][release-shield] ![Stars][stars-shield]
 
+Join us on Discord:
+
+<a target="_blank" href="https://discord.gg/5wjQ2asb64"><img src="https://dcbadge.limes.pink/api/server/5wjQ2asb64" alt="" /></a>
+
 ## Add-ons
 
 This repository contains the following add-ons
@@ -52,3 +56,7 @@ Feel free to create a PR for fixes and enhancements.
 [armhf-shield]: https://img.shields.io/badge/armhf-yes-green.svg
 [armv7-shield]: https://img.shields.io/badge/armv7-yes-green.svg
 [i386-shield]: https://img.shields.io/badge/i386-yes-green.svg
+
+## Deployment
+
+Instructions aimed at maintainers for deploying a new version: [Deployment](deployment.md)
