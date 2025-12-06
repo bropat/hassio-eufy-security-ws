@@ -1,3 +1,8 @@
+## 1.9.3-CR1
+
+- Changed the docker file - and put config.yaml - to allow HA to pull custom eufy-security-client branches/repos that isn't the default one
+
+
 ## 1.9.3
 
 - Updated eufy-security-ws to version [`1.9.3`](https://github.com/bropat/eufy-security-ws/releases/tag/1.9.3)

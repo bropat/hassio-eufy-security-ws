@@ -1,4 +1,4 @@
-# Official eufy-security-ws Home Assistant add-on repository
+# Forked eufy-security-ws Home Assistant custom add-on repository - adding ability to customise the eufy-security-client branch used in the add-on 
 
 ![Logo](eufy-security-ws/logo.png)
 
@@ -22,24 +22,11 @@ This repository contains the following add-ons
 
 ## Installation
 
-1. To add this repository to Home Assistant you have 2 options:
+1. To add this repository to Home Assistan:
 
-   1. Go to **Settings → Add-ons → Add-on store** and click **⋮ → Repositories**, fill in `https://github.com/bropat/hassio-eufy-security-ws` and click **Add → Close**
-   2. click the **Add repository** button below, click **Add → Close** (You might need to enter the **internal IP address** of your Home Assistant instance first).
-
-      [![Open your Home Assistant instance and show the add add-on repository dialog with a specific repository URL pre-filled.](https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2Fbropat%2Fhassio-eufy-security-ws)
-
-2. To install an addon click on the relative addon link above to view the docs.
-
-## Changelog
-
-The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/).
-
-All notable changes to this project will be documented in the [CHANGELOG.md](eufy-security-ws/CHANGELOG.md) file.
-
-Version for releases is based on [eufy-security-ws](https://github.com/bropat/eufy-security-ws) format: `X.Y.Z`.
-
-Any changes on the addon that do not require a new version of [eufy-security-ws](https://github.com/bropat/eufy-security-ws) will use the format: `X.Y.Z-A` where `X.Y.Z` is fixed on the [eufy-security-ws](https://github.com/bropat/eufy-security-ws) release version and `A` is related to the addon.
+   1. Update the build.yaml - to the repo that you want HA to use for eufy-security-client that has the required modifications/updates
+   2. Copy the eufy-security-ws-customrepo to the addon directory (use samba or whichever way you load custom addons in Home Assistant)
+   3. Go to the addon in HA, and you should see the custom addon their - install and it should build based on the build.yaml you updated with the custom repo for eufy-security-client
 
 ## Issues
 
@@ -57,6 +44,3 @@ Feel free to create a PR for fixes and enhancements.
 [armv7-shield]: https://img.shields.io/badge/armv7-yes-green.svg
 [i386-shield]: https://img.shields.io/badge/i386-yes-green.svg
 
-## Deployment
-
-Instructions aimed at maintainers for deploying a new version: [Deployment](deployment.md)
