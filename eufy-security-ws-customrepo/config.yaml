@@ -1,6 +1,6 @@
 name: eufy-security-ws-customrepo
 description: Allows you to control Eufy security devices over websocket by connecting to the Eufy cloud servers and local/remote stations  - with custom repo parameter in build.yaml - so you can put different eufy_security_client branches for development testing
-version: 1.9.3-CR1
+version: 1.9.3-CR2
 slug: "eufy_security_ws_customrepo"
 url: https://github.com/bropat/hassio-eufy-security-ws
 init: false
