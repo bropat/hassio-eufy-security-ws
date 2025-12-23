@@ -20,7 +20,7 @@ jobs:
         uses: home-assistant/builder@master
         with:
           args: |
-            --amd64 --aarch64 --armv7  \
+            --amd64 --aarch64   \
             --target eufy-security-ws \
             --docker-hub bropat
         #env:
