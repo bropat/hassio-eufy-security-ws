@@ -121,7 +121,7 @@ if [ -n "${EUFY_CLIENT_GIT_URL}" ] && [ -n "${EUFY_CLIENT_GIT_BRANCH}" ];  then
     whoami
     ls -al /usr/src
     chown -R $(whoami) /usr/src/app
-    cd /usr/src/app/
+    cd /tmp
     npm init -y
     npm pkg set name="hassio-eufy-security-ws" \
     npm pkg set private=true \
