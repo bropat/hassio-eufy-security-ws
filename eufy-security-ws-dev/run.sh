@@ -120,7 +120,9 @@ if [ -n "${EUFY_CLIENT_GIT_URL}" ] && [ -n "${EUFY_CLIENT_GIT_BRANCH}" ];  then
     echo "Installing a git version of Eufy Client $EUFY_CLIENT_GIT_URL with branch $EUFY_CLIENT_GIT_BRANCH"
     whoami
 
-    cd /usr/src/app/eufy-temp
+    cd /usr/src/app
+    ls -al .
+    chmod 777 package.json
     ls -al .
     npm pkg set dependencies.eufy-security-ws="$EUFY_SECURITY_WS_VERSION"
     npm pkg set "overrides.eufy-security-client=$EUFY_CLIENT_GIT_URL#$EUFY_CLIENT_GIT_BRANCH"
