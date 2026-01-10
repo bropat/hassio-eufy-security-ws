@@ -1,7 +1,7 @@
-name: eufy-security-ws
-description: Allows you to control Eufy security devices over websocket by connecting to the Eufy cloud servers and local/remote stations
+name: eufy-security-ws-dev
+description: DEV - Allows you to control Eufy security devices over websocket by connecting to the Eufy cloud servers and local/remote stations
 version: 1.9.7
-slug: "eufy_security_ws_customrepo"
+slug: "eufy_security_ws_dev"
 url: https://github.com/bropat/hassio-eufy-security-ws
 init: false
 arch:
@@ -48,4 +48,4 @@ schema:
   github_url: str?
   github_branch: str?
   eufy_ws_version: str
-image: bropat/hassio-eufy-security-ws-customrepo-{arch}
+image: bropat/hassio-eufy-security-ws-dev-{arch}
