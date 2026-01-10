@@ -34,6 +34,11 @@ profile eufy_security_ws_dev flags=(attach_disconnected,mediate_deleted) {
   owner @{HOME}/.npmrc r,
   owner @{HOME}/.config/configstore/** rw,
 
+  owner /root/.npm/ rw,
+  owner /root/.npm/** rw,
+  owner /root/.npmrc r,
+  owner /root/.config/configstore/** rw,
+
   owner /usr/src/app/ r,
   owner /usr/src/app/** rw,
   owner /usr/src/app/**.sh ix,  # Allow lifecycle scripts
