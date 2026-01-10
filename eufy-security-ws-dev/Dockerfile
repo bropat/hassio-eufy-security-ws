@@ -4,6 +4,7 @@ FROM $BUILD_FROM
 ARG EUFY_SECURITY_WS_VERSION
 
 WORKDIR /usr/src/app
+RUN chmod -R 777 /usr/src/app
 RUN \
     set -x \
     && apk add --no-cache \
@@ -16,5 +17,6 @@ RUN \
 COPY run.sh /
 RUN chmod a+x /run.sh
 WORKDIR /data
+
 
 CMD [ "/run.sh" ]
