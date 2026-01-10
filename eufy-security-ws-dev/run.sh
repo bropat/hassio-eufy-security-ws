@@ -37,14 +37,13 @@ fi
 
 EUFY_CLIENT_GIT_URL=""
 if bashio::config.has_value 'github_url'; then
-    EUFY_CLIENT_GIT_URL="$github_url"
+    EUFY_CLIENT_GIT_URL="$(bashio::config 'github_url')"
 fi
 
 EUFY_CLIENT_GIT_BRANCH=""
 if bashio::config.has_value 'github_branch'; then
-    EUFY_CLIENT_GIT_BRANCH="$github_branch"
+    EUFY_CLIENT_GIT_BRANCH="$(bashio::config 'github_branch')"
 fi
-
 
 EUFY_SECURITY_WS_VERSION="$(bashio::config 'eufy_ws_version')"
 
