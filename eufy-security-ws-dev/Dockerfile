@@ -7,7 +7,6 @@ WORKDIR /usr/src/app
 RUN chmod -R 777 /usr/src/app
 RUN \
     set -x \
-    $$ mkdir /usr/src/app/eufy-temp \
     && apk add --no-cache \
     nodejs \
     npm \
@@ -16,9 +15,9 @@ RUN \
     && whoami > best \
     && npm install --force \
     "eufy-security-ws@${EUFY_SECURITY_WS_VERSION}"
-COPY package.json /usr/src/app/eufy-temp/
-RUN chown root:root /usr/src/app/eufy-temp/package.json
-RUN chmod 777 /usr/src/app/eufy-temp/package.json
+COPY package.json /usr/src/app/
+RUN chown root:root /usr/src/app/package.json
+RUN chmod 777 /usr/src/app/package.json
 
 COPY run.sh /
 RUN chmod a+x /run.sh
