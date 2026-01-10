@@ -119,12 +119,9 @@ check_version() {
 if [ -n "${EUFY_CLIENT_GIT_URL}" ] && [ -n "${EUFY_CLIENT_GIT_BRANCH}" ];  then
     echo "Installing a git version of Eufy Client $EUFY_CLIENT_GIT_URL with branch $EUFY_CLIENT_GIT_BRANCH"
     whoami
-    ls -al /usr/src
-    chown -R $(whoami) /usr/src/app
-    cd /tmp
-    sudo npm init -y
-    npm pkg set name="hassio-eufy-security-ws" \
-    npm pkg set private=true \
+
+    cd /usr/src/app/eufy-temp
+    ls -al .
     npm pkg set dependencies.eufy-security-ws="$EUFY_SECURITY_WS_VERSION"
     npm pkg set "overrides.eufy-security-client=$EUFY_CLIENT_GIT_URL#$EUFY_CLIENT_GIT_BRANCH"
     npm install --force
