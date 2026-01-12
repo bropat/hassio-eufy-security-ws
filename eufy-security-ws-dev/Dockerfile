@@ -10,7 +10,7 @@ RUN \
     nodejs \
     npm \
     jq \
-    git \
+    git
 
 COPY package.json /usr/src/app/
 
