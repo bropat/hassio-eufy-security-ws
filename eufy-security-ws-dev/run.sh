@@ -118,15 +118,21 @@ check_version() {
 
 if [ -n "${EUFY_CLIENT_GIT_URL}" ] && [ -n "${EUFY_CLIENT_GIT_BRANCH}" ];  then
     echo "Installing a git version of Eufy Client $EUFY_CLIENT_GIT_URL with branch $EUFY_CLIENT_GIT_BRANCH"
-    whoami
-
     cd /usr/src/app
-    ls -al .
-    chmod 777 package.json
-    ls -al .
+    git clone -b "$EUFY_CLIENT_GIT_BRANCH" "$EUFY_CLIENT_GIT_URL"
+
+    cd eufy-security-client
+    npm ci
+    npm run build -y
+    npm pack
+    mv eufy-security-client*.tgz ../eufy-security-client.tgz
+    cd ..
+
     npm pkg set dependencies.eufy-security-ws="$EUFY_SECURITY_WS_VERSION"
-    npm pkg set "overrides.eufy-security-client=$EUFY_CLIENT_GIT_URL#$EUFY_CLIENT_GIT_BRANCH"
+    npm pkg set overrides.eufy-security-client=file:eufy-security-client.tgz
     npm install --force
+else
+    npm install --force "eufy-security-ws@${EUFY_SECURITY_WS_VERSION}"
 fi
 
 if bashio::config.has_value 'username' && bashio::config.has_value 'password'; then
