@@ -4,24 +4,61 @@ on:
   release:
     types: [published]
 
+permissions:
+  contents: read
+
+env:
+  ADDON_DIR: eufy-security-ws
+  # Per-arch image name prefix; {arch} is appended (matches config.yaml `image:`).
+  IMAGE_PREFIX: bropat/hassio-eufy-security-ws
+
 jobs:
-  publish:
-    name: Publish
-    runs-on: ubuntu-latest
+  build:
+    name: Build ${{ matrix.arch }}
+    runs-on: ${{ matrix.os }}
+    # The deprecated home-assistant/builder action built every arch in one job;
+    # the new build-image action builds one arch per (native) runner. The
+    # official reusable actions only support amd64 + aarch64.
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - arch: amd64
+            os: ubuntu-24.04
+          - arch: aarch64
+            os: ubuntu-24.04-arm
     steps:
       - name: Checkout the repository
         uses: actions/checkout@v4
-      - name: Login to DockerHub
-        uses: docker/login-action@v3
+
+      - name: Read add-on build config
+        id: cfg
+        run: |
+          dir="${ADDON_DIR}"
+          base="$(grep -E "^[[:space:]]+${{ matrix.arch }}:" "$dir/build.yaml" | head -1 | awk '{print $2}')"
+          ews="$(grep -E '^[[:space:]]+EUFY_SECURITY_WS_VERSION:' "$dir/build.yaml" | awk '{print $2}')"
+          ver="$(grep -E '^version:' "$dir/config.yaml" | awk '{print $2}' | tr -d '"')"
+          echo "base=$base" >> "$GITHUB_OUTPUT"
+          echo "ews=$ews" >> "$GITHUB_OUTPUT"
+          echo "ver=$ver" >> "$GITHUB_OUTPUT"
+
+      - name: Build and push ${{ matrix.arch }} image
+        uses: home-assistant/builder/actions/build-image@2026.03.2
         with:
-          username: ${{ secrets.DOCKER_HUB_USERNAME }}
-          password: ${{ secrets.DOCKER_HUB_TOKEN }}
-      - name: Publish
-        uses: home-assistant/builder@master
-        with:
-          args: |
-            --amd64 --arch64 --armv7  \
-            --target eufy-security-ws \
-            --docker-hub bropat
-        #env:
-        #  CAS_API_KEY: ${{ secrets.CAS_TOKEN }}
+          arch: ${{ matrix.arch }}
+          context: ${{ env.ADDON_DIR }}
+          image: ${{ env.IMAGE_PREFIX }}-${{ matrix.arch }}
+          container-registry: docker.io
+          container-registry-username: ${{ secrets.DOCKER_HUB_USERNAME }}
+          container-registry-password: ${{ secrets.DOCKER_HUB_TOKEN }}
+          image-tags: |
+            ${{ steps.cfg.outputs.ver }}
+            latest
+          version: ${{ steps.cfg.outputs.ver }}
+          push: "true"
+          # This add-on was never image-signed (codenotary was disabled), and
+          # cosign is what pulls the binary that was failing to download.
+          cosign: "false"
+          build-args: |
+            BUILD_FROM=${{ steps.cfg.outputs.base }}
+            EUFY_SECURITY_WS_VERSION=${{ steps.cfg.outputs.ews }}
