@@ -7,9 +7,6 @@ init: false
 arch:
   - aarch64
   - amd64
-  - armhf
-  - armv7
-  - i386
 #https://github.com/codenotary/cas/issues/296
 #codenotary: patrick.broetto@gmail.com
 stage: stable
