@@ -1,6 +1,9 @@
+# Alpine 3.23 is the first HA base image that ships Node.js 24 in its main
+# repository (3.21/3.22 cap out at Node 22). Pinning to 3.23 lets us install
+# Node straight from the base's repos with no edge-repo workarounds.
 build_from:
-  aarch64: ghcr.io/home-assistant/aarch64-base:3.21
-  amd64: ghcr.io/home-assistant/amd64-base:3.21
+  aarch64: ghcr.io/home-assistant/aarch64-base:3.23
+  amd64: ghcr.io/home-assistant/amd64-base:3.23
 codenotary:
   #https://github.com/codenotary/cas/issues/296
   #signer: patrick.broetto@gmail.com

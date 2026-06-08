@@ -93,20 +93,14 @@ JSON_STRING="$( jq -n \
     }"
   )"
 
-check_version() {
-    if [ "$1" = "$2" ]; then
-        return 1 # equal
-    fi
-    version=$(printf '%s\n' "$1" "$2" | sort -V | tail -n 1)
-    if [ "$version" = "$2" ]; then
-        return 2 # greater
-    fi
-    return 0 # lower
-}
-
 if bashio::config.has_value 'username' && bashio::config.has_value 'password'; then
     echo "$JSON_STRING" > $CONFIG_PATH
-    exec /usr/bin/node --security-revert=CVE-2023-46809 $IPV4_FIRST_NODE_OPTION /usr/src/app/node_modules/eufy-security-ws/dist/bin/server.js --host 0.0.0.0 --config $CONFIG_PATH $DEBUG_OPTION $PORT_OPTION
+    # No --security-revert=CVE-2023-46809: Node 24 dropped that revert token and
+    # aborts on startup if it's passed. eufy-security-ws@3.0.1 instead defaults
+    # config.enableEmbeddedPKCS1Support=true, so eufy-security-client uses its
+    # pure-JS PKCS#1 v1.5 path and the P2P RSA handshake keeps working.
+    # See bropat/eufy-security-ws#564.
+    exec /usr/bin/node $IPV4_FIRST_NODE_OPTION /usr/src/app/node_modules/eufy-security-ws/dist/bin/server.js --host 0.0.0.0 --config $CONFIG_PATH $DEBUG_OPTION $PORT_OPTION
 else
     echo "Required parameters username and/or password not set. Starting aborted!"
 fi
